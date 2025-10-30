@@ -4,6 +4,6 @@ import java.util.List;
 
 import application.dtos.viewAllCategories.ViewAllCategoriesDTO;
 
-public interface ViewAllCategoriesInterface {
+public interface ViewAllCategoriesDAO {
 	List<ViewAllCategoriesDTO> findAll();
 }

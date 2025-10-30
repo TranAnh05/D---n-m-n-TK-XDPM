@@ -6,16 +6,16 @@ import java.util.List;
 import application.dtos.viewAllCategories.ViewAllCategoriesDTO;
 import application.dtos.viewAllCategories.ViewAllCategoriesOutputData;
 import application.ports.in.viewAllCategories.ViewAllCategoriesInputBoundary;
-import application.ports.out.viewAllCategories.ViewAllCategoriesInterface;
+import application.ports.out.viewAllCategories.ViewAllCategoriesDAO;
 import application.ports.out.viewAllCategories.ViewAllCategoriesOutputBoundary;
 import domain.entities.Category;
 
 public class ViewAllCategoriesUsecase implements ViewAllCategoriesInputBoundary {
 	private ViewAllCategoriesOutputBoundary outBoundary;
-	private ViewAllCategoriesInterface dao;
+	private ViewAllCategoriesDAO dao;
 	private ViewAllCategoriesOutputData outData;
 	
-	public ViewAllCategoriesUsecase( ViewAllCategoriesOutputBoundary outBoundary, ViewAllCategoriesInterface dao) {
+	public ViewAllCategoriesUsecase( ViewAllCategoriesOutputBoundary outBoundary, ViewAllCategoriesDAO dao) {
 		this.outBoundary = outBoundary;
 		this.dao = dao;
 	}

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import MockDB.addNewCategory.MockCategoryRepository;
+import MockDB.addNewCategory.MockAddNewCategory;
 import adapters.addNewCategory.AddNewCategoryPresenter;
 import adapters.addNewCategory.AddNewCategoryViewModel;
 import application.dtos.addNewCategory.AddNewCategoryInputData;
@@ -35,7 +35,7 @@ public class TestUsecase {
 		
 		AddNewCategoryViewModel model = new AddNewCategoryViewModel();
 		AddNewCategoryPresenter presenter = new AddNewCategoryPresenter(model);
-		MockCategoryRepository mockDB = new MockCategoryRepository();
+		MockAddNewCategory mockDB = new MockAddNewCategory();
 		
 		AddNewCategoryUsecase usecase = new AddNewCategoryUsecase(presenter, mockDB);
 		

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import application.dtos.viewAllCategories.ViewAllCategoriesDTO;
-import application.ports.out.viewAllCategories.ViewAllCategoriesInterface;
+import application.ports.out.viewAllCategories.ViewAllCategoriesDAO;
 
-public class MockViewAllCategoriesDB implements ViewAllCategoriesInterface{
+public class MockViewAllCategoriesDB implements ViewAllCategoriesDAO{
 	private List<ViewAllCategoriesDTO> data = new ArrayList<>();
 	
 	public MockViewAllCategoriesDB() {
