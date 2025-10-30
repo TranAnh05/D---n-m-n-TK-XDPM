@@ -1,7 +1,7 @@
 package domain.entities;
 
 public class Product {
-	private long id;
+	private int id;
     private String name;
     private String description;
     private double price;
@@ -10,24 +10,28 @@ public class Product {
     private Category category;
     
  // Constructor (đã được UseCase validate)
-    public Product(long id, String name, double price, int stockQuantity, Category category) {
+    public Product(int id, String name, String description, double price, int stockQuantity, String imageUrl, Category category) {
         this.id = id;
         this.name = name;
+        this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
+        this.imageUrl = imageUrl;
         this.category = category;
     }
     
 	// (Constructor cho tạo mới, không cần ID)
-    public Product(String name, double price, int stockQuantity, Category category) {
+    public Product(String name,  String description, double price, int stockQuantity, String imageUrl, Category category) {
         this.name = name;
+        this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
+        this.imageUrl = imageUrl;
         this.category = category;
     }
     
     //  gettes / setters
-    public long getId() {
+    public int getId() {
 		return id;
 	}
 
