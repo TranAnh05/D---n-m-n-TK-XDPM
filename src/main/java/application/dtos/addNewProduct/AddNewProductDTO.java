@@ -1,6 +1,6 @@
-package MockDB.deleteCategory;
+package application.dtos.addNewProduct;
 
-public class ProductDTO {
+public class AddNewProductDTO {
 	public int id;
 	public String name;
 	public String description;

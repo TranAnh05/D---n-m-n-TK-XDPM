@@ -22,12 +22,12 @@ Dự án được cấu trúc thành 4 tầng riêng biệt, tuân thủ nghiêm
     * Đây là lớp trong cùng, không phụ thuộc vào bất cứ thứ gì.
 
 * **Tầng 3: Application / Use Cases**
-    * Chứa toàn bộ logic nghiệp vụ của ứng dụng (ví dụ: `AddNewCategoryInteractor`).
-    * Định nghĩa các **Ports** (Interfaces) để giao tiếp với bên ngoài (ví dụ: `ICategoryRepository`, `ICategoryPresenter`).
+    * Chứa toàn bộ logic nghiệp vụ của ứng dụng (ví dụ: `AddNewCategoryUsecase`).
+    * Định nghĩa các **Ports** (Interfaces) để giao tiếp với bên ngoài (ví dụ: `CategoryRepository`, `AddNewCategoryOutputBoundary`).
     * Tầng này không biết gì về Database hay Web API.
 
 * **Tầng 2: Adapters / Interface Adapters**
-    * Là các "bộ chuyển đổi" (ví dụ: `CategoryPresenter`, `CategoryViewModel`).
+    * Là các "bộ chuyển đổi" (ví dụ: `AddNewCategoryPresenter`, `AddNewCategoryViewModel`).
     * Chịu trách nhiệm triển khai các Port (Interface) của Tầng 3.
     * Chuyển đổi dữ liệu từ Use Case (Tầng 3) sang định dạng mà Tầng 1 (Web/Database) có thể hiểu.
 

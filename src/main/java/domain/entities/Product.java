@@ -7,27 +7,27 @@ public class Product {
     private double price;
     private int stockQuantity;
     private String imageUrl;
-    private Category category;
+    private int categoryId;
     
  // Constructor (đã được UseCase validate)
-    public Product(int id, String name, String description, double price, int stockQuantity, String imageUrl, Category category) {
+    public Product(int id, String name, String description, double price, int stockQuantity, String imageUrl, int categoryId) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
         this.imageUrl = imageUrl;
-        this.category = category;
+        this.categoryId = categoryId;
     }
     
 	// (Constructor cho tạo mới, không cần ID)
-    public Product(String name,  String description, double price, int stockQuantity, String imageUrl, Category category) {
+    public Product(String name,  String description, double price, int stockQuantity, String imageUrl, int categoryId) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
         this.imageUrl = imageUrl;
-        this.category = category;
+        this.categoryId = categoryId;
     }
     
     //  gettes / setters
@@ -55,8 +55,8 @@ public class Product {
 		return imageUrl;
 	}
 
-	public Category getCategory() {
-		return category;
+	public int getCategoryId() {
+		return categoryId;
 	}
 
     // --- Validation (Theo logic của bạn) ---

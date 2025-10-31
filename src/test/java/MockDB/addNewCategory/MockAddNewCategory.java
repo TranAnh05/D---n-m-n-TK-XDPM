@@ -1,13 +1,10 @@
 package MockDB.addNewCategory;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import application.dtos.addNewCategory.AddNewCategoryDTO;
 import application.ports.out.addNewCategory.AddNewCategoryDAO;
-import domain.entities.Category;
 
 public class MockAddNewCategory implements AddNewCategoryDAO{
 	// Dùng HashMap để giả lập Bảng (Table) trong CSDL
