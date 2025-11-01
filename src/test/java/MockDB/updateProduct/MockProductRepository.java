@@ -55,11 +55,11 @@ public class MockProductRepository implements ProductRepository{
 
 	@Override
 	public ProductFromDBDTO update(ProductFromDBDTO productData) {
-		for(ProductFromDBDTO dto : list) {
-			if(dto.id == productData.id) {
-				dto = productData;
-				list.add(dto);
-				return dto;
+		int length = list.size();
+		for(int i = 0; i < length; i++) {
+			if(list.get(i).id == productData.id) {
+				list.set(i, productData);
+				return productData;
 			}
 		}
 		return null;

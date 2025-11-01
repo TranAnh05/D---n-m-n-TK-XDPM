@@ -51,6 +51,8 @@ public class User {
     public static boolean isValidPassword(String password) {
         return password != null && password.trim().length() >= 6;
     }
-    
-    
+
+	public void setRole(Role role) {
+		this.role = role;
+	} 
 }
