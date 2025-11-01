@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import adapters.addNewCategory.AddNewCategoryPresenter;
 import adapters.addNewCategory.AddNewCategoryViewModel;
 import application.dtos.addNewCategory.AddNewCategoryInputData;
-import application.ports.out.addNewCategory.AddNewCategoryOutputBoundary;
 import application.usecases.addNewCategory.AddNewCategoryUsecase;
 
 public class TestPresenter {

@@ -71,8 +71,4 @@ public class Product {
     public static boolean isValidStock(int stock) {
         return stock >= 0;
     }
-    
-    public static boolean isValidCategory(Category category) {
-        return category != null;
-    }
 }
