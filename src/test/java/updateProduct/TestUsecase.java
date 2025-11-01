@@ -9,7 +9,6 @@ import MockDB.updateProduct.MockProductRepository;
 import adapters.updateProduct.UpdateProductPresenter;
 import adapters.updateProduct.UpdateProductViewModel;
 import application.dtos.updateProduct.UpdateProductInputData;
-import application.ports.out.updateProduct.UpdateProductOutputBoundary;
 import application.usecases.updateProduct.UpdateProductUsecase;
 
 public class TestUsecase {
