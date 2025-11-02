@@ -6,4 +6,5 @@ public class UserViewDTO {
     public String fullName;
     public String address;
     public String role;
+    public String isBlocked;
 }

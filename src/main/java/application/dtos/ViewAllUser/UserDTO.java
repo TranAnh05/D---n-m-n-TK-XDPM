@@ -8,4 +8,5 @@ public class UserDTO {
     public String fullName;
     public String address;
     public Role role;
+    public boolean isBlocked;
 }

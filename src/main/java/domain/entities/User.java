@@ -7,12 +7,13 @@ public class User {
     private String fullName;
     private String address;
     private Role role; 
+    private boolean isBlocked;
     
     public User() {
     	
     }
     
-	public User(int id, String email, String passwordHash, String fullName, String address, Role role) {
+	public User(int id, String email, String passwordHash, String fullName, String address, Role role, boolean isBlocked) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -20,6 +21,7 @@ public class User {
 		this.fullName = fullName;
 		this.address = address;
 		this.role = role;
+		this.isBlocked = isBlocked;
 	}
 	
 	// Constructor để tạo mới
@@ -29,6 +31,7 @@ public class User {
         this.fullName = fullName;
         this.address = address;
         this.role = role;
+        this.isBlocked = false;
     }
     
     // --- Getters (Không nên có Setters cho mọi thứ để đảm bảo an toàn) ---
@@ -38,6 +41,7 @@ public class User {
     public String getFullName() { return fullName; }
     public String getAddress() { return address; }
     public Role getRole() { return role; }
+    public boolean getIsBLocked() { return isBlocked; }
     
     // --- Validation 
     public static boolean isValidEmail(String email) {
@@ -55,4 +59,8 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	} 
+	
+	public void setIsBlocked(boolean isBlocked) {
+		this.isBlocked = isBlocked;
+	}
 }

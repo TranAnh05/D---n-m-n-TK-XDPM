@@ -95,6 +95,7 @@ public class UpdateUserRoleUsecase implements UpdateUserRoleInputBoundary{
 		dto.fullName = updateUserDB.fullName;
 		dto.address = updateUserDB.address;
 		dto.role = updateUserDB.role;
+		dto.isBlocked = updateUserDB.isBlocked;
 		
 		return dto;
 	}
@@ -108,12 +109,13 @@ public class UpdateUserRoleUsecase implements UpdateUserRoleInputBoundary{
 		dto.fullName = userEntity.getFullName();
 		dto.address = userEntity.getAddress();
 		dto.role = userEntity.getRole();
+		dto.isBlocked = userEntity.getIsBLocked();
 		
 		return dto;
 	}
 
 	private User convertToEntity(UserFromDBDTO userData) {
-		User user = new User(userData.id, userData.email, userData.passwordHash, userData.fullName, userData.address, userData.role);
+		User user = new User(userData.id, userData.email, userData.passwordHash, userData.fullName, userData.address, userData.role, userData.isBlocked);
 		return user;
 	}
 	

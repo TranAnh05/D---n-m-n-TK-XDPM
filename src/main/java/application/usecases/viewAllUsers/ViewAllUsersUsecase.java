@@ -77,6 +77,7 @@ public class ViewAllUsersUsecase implements ViewAllUsersInputBoundary{
             dto.fullName = entity.getFullName();
             dto.address = entity.getAddress();
             dto.role = entity.getRole();
+            dto.isBlocked = entity.getIsBLocked();
             
             safeOutputList.add(dto);
         }
@@ -89,11 +90,9 @@ public class ViewAllUsersUsecase implements ViewAllUsersInputBoundary{
         for (UserFromDBDTO data : userDataList) {
             userEntities.add(new User(
                 data.id, data.email, data.passwordHash,
-                data.fullName, data.address, data.role
+                data.fullName, data.address, data.role, data.isBlocked
             ));
         }
         return userEntities;
 	}
-	
-	
 }

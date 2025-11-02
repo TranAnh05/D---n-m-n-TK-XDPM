@@ -30,6 +30,7 @@ public class UpdateUserRolePresenter implements UpdateUserRoleOutputBoundary{
 		viewDto.fullName = updatedUser.fullName;
 		viewDto.address = updatedUser.address;
 		viewDto.role = convertRoleToString(updatedUser.role);
+		viewDto.isBlocked = String.valueOf(updatedUser.isBlocked);
 		return viewDto;
 	}
 

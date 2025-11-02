@@ -18,6 +18,7 @@ public class MockUserRepository implements UserRepository{
 		user1.fullName = "Tran Anh";
 		user1.address = "Binh Dinh";
 	    user1.role = Role.ADMIN;
+	    user1.isBlocked = false;
 	    
 	    UserFromDBDTO user2 = new UserFromDBDTO();
 	    user2.id = 2;
@@ -26,6 +27,7 @@ public class MockUserRepository implements UserRepository{
 	    user2.fullName = "Tran Anh 02";
 	    user2.address = "Binh Dinh";
 	    user2.role = Role.CUSTOMER;
+	    user1.isBlocked = false;
 	    
 	    list.add(user1);
 	    list.add(user2);

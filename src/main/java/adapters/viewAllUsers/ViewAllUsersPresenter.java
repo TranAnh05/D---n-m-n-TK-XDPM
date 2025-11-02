@@ -41,6 +41,7 @@ public class ViewAllUsersPresenter implements ViewAllUsersOutputBoundary{
 			viewDto.fullName = dto.fullName;
 			viewDto.address = dto.address;
 			viewDto.role = convertRoleToString(dto.role);
+			viewDto.isBlocked = String.valueOf(dto.isBlocked);
 			viewDTOs.add(viewDto);
 		}
 		return viewDTOs;
